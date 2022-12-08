@@ -9,6 +9,15 @@ resizeBtn.addEventListener("click", () => {
 
 // generate a row x col square grid
 function generateGrid(rows, cols) {
+    // delete existing grid
+    let grid = document.querySelectorAll(".grid-item");
+    grid.forEach(item => container.removeChild(item));
+
+    // update --grid-rows and --grid-cols css properties
+    container.style.setProperty("--grid-rows", rows);
+    container.style.setProperty("--grid-cols", cols);
+
+    // generate new grid
     for (let i = 0; i < (rows * cols); i++) {
         let gridItem = document.createElement("div");
         gridItem.textContent = i+1;
