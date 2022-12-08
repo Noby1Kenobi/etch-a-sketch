@@ -7,9 +7,9 @@ resizeBtn.addEventListener("click", () => {
     // generateGrid(row, col);
 })
 
-// generate 16x16 
-function generateGrid() {
-    for (let i = 0; i < 16*16; i++) {
+// generate a row x col square grid
+function generateGrid(row, col) {
+    for (let i = 0; i < (row * col); i++) {
         let gridItem = document.createElement("div");
         gridItem.textContent = i+1;
         gridItem.className = "grid-item";
@@ -17,4 +17,5 @@ function generateGrid() {
     }
 }
 
-generateGrid();
+// start website with a 16x16 grid
+generateGrid(16, 16);
