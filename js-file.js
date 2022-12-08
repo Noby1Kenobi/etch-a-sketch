@@ -2,14 +2,14 @@ const container = document.querySelector("#container");
 const resizeBtn = document.querySelector("#resize-btn");
 
 resizeBtn.addEventListener("click", () => {
-    let row = prompt("Enter new number of squares per row:", row);
-    let col = prompt("Enter new number of squares per row:", col);
+    let rows = prompt("Enter new number of squares per row:", rows);
+    let cols = prompt("Enter new number of squares per row:", cols);
     // generateGrid(row, col);
 })
 
 // generate a row x col square grid
-function generateGrid(row, col) {
-    for (let i = 0; i < (row * col); i++) {
+function generateGrid(rows, cols) {
+    for (let i = 0; i < (rows * cols); i++) {
         let gridItem = document.createElement("div");
         gridItem.textContent = i+1;
         gridItem.className = "grid-item";
