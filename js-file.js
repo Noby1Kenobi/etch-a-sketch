@@ -2,23 +2,21 @@ const container = document.querySelector("#container");
 const resizeBtn = document.querySelector("#resize-btn");
 
 resizeBtn.addEventListener("click", () => {
-    let rows = prompt("Enter new number of squares per row:");
-    let cols = prompt("Enter new number of squares per cols:");
-    generateGrid(rows, cols);
+    let size = prompt("Enter new size of N*N grid:");
+    generateGrid(size);
 });
 
 // generate a row x col square grid
-function generateGrid(rows, cols) {
+function generateGrid(size) {
     // delete existing grid
     let grid = document.querySelectorAll(".grid-item");
     grid.forEach(item => container.removeChild(item));
 
-    // update --grid-rows and --grid-cols css properties
-    container.style.setProperty("--grid-rows", rows);
-    container.style.setProperty("--grid-cols", cols);
+    // update --grid-size property
+    container.style.setProperty("--grid-size", size);
 
     // generate new grid
-    for (let i = 0; i < (rows * cols); i++) {
+    for (let i = 0; i < (size * size); i++) {
         let gridItem = document.createElement("div");
         gridItem.textContent = i+1;
         gridItem.className = "grid-item";
@@ -27,4 +25,4 @@ function generateGrid(rows, cols) {
 }
 
 // start website with a 16x16 grid
-generateGrid(16, 16);
+generateGrid(16);
