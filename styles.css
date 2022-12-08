@@ -9,3 +9,7 @@
     height: 50px;
     width: 50px;
 }
+
+.grid-item:hover {
+    background-color: blue;
+}
