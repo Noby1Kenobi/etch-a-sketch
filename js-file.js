@@ -2,7 +2,10 @@ const container = document.querySelector("#container");
 const resizeBtn = document.querySelector("#resize-btn");
 
 resizeBtn.addEventListener("click", () => {
-    let size = prompt("Enter new size of N*N grid:");
+    let size = 101;
+    while (size > 100) {
+        size = prompt("Enter new size of N*N grid. Max size is 100.");
+    }
     generateGrid(size);
 });
 
