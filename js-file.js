@@ -18,7 +18,6 @@ function generateGrid(size) {
     // generate new grid
     for (let i = 0; i < (size * size); i++) {
         let gridItem = document.createElement("div");
-        gridItem.textContent = i+1;
         gridItem.className = "grid-item";
         container.appendChild(gridItem);
     }
