@@ -3,7 +3,7 @@ const resizeBtn = document.querySelector("#resize-btn");
 
 resizeBtn.addEventListener("click", () => {
     let rows = prompt("Enter new number of squares per row:");
-    let cols = prompt("Enter new number of squares per row:");
+    let cols = prompt("Enter new number of squares per cols:");
     generateGrid(rows, cols);
 });
 
